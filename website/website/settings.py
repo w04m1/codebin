@@ -11,9 +11,12 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-from dotenv import load_dotenv, dotenv_values
+from json import loads
 
-config = dotenv_values(".env")
+from dotenv import dotenv_values
+
+
+config = dotenv_values("../.env")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,13 +25,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ""
+SECRET_KEY = config["DJ_SECRET"]
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = int(config["DEBUG"])
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [] if DEBUG else loads(config["ALLOWED_HOSTS"])
 
 
 # Application definition
@@ -76,6 +77,7 @@ WSGI_APPLICATION = "website.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# TODO: switch db depending on DEBUG value
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
