@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "codebin"
+version = "0.1.0"
+description = ""
+authors = ["Даниил Шерстенников <70951451+SherstennikovDaniil@users.noreply.github.com>"]
+license = "GNU V3"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = "^4.2.4"
+djangorestframework = "^3.14.0"
+Markdown = "^3.4.4"
+django-filter = "^23.2"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
