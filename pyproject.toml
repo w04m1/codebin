@@ -12,6 +12,7 @@ Django = "^4.2.4"
 djangorestframework = "^3.14.0"
 Markdown = "^3.4.4"
 django-filter = "^23.2"
+python-dotenv = "^1.0.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.7.0"
