@@ -5,8 +5,6 @@ from django.contrib.auth.models import (
     PermissionsMixin,
 )
 
-# Create your models here.
-
 
 class UserManage(BaseUserManager):
     def create_user(self, email, password=None):
