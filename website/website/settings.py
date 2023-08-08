@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "users.apps.UsersConfig",
+    "snippets.apps.SnippetsConfig",
 ]
 
 # TODO: dive into rest_framework settings
