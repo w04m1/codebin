@@ -7,7 +7,7 @@ from .views import CustomTokenObtainPairView, RegistrationAPIView, UserAPIView
 urlpatterns = [
     path("auth/sign-up/", RegistrationAPIView.as_view(), name="sign_up"),
     re_path(
-        r"^auth\/(token|login)\/$",
+        r"^auth/(token|login)/$",
         CustomTokenObtainPairView.as_view(),
         name="token_obtain_pair",
     ),
