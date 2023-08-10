@@ -14,6 +14,8 @@ function SnippetsContainer({ snippets }) {
     <div className="snippet-container">
       <h2>Snippets</h2>
       {snippets.map((snippet) => (
+        // it says to add a key prop to the snippet card, but I don't know what to use for the key prop
+        // TODO:so better check that out in docs
         <SnippetCard
           key={snippet.key}
           id={snippet.id}
@@ -48,6 +50,7 @@ const data = [
 
 function App() {
   return (
+    // TODO: move all that to a proper file and add fetching data via api
     <div className="App">
       <SnippetsContainer snippets={data} />
     </div>
