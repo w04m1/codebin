@@ -7,6 +7,14 @@ Maybe some social aspect will be added.
 
 # Backend
 ## Users
-- Sign-up [x]
-- JWT auth [x]
-- Need more ideas []
+- [x] Sign-up 
+- [x] JWT auth 
+- [ ] Need more ideas...
+
+## Snippets
+- [x] CRUD snippets
+- [ ] Reactions
+---
+
+# Frontend
+- [ ] Get used to React(in progress)
